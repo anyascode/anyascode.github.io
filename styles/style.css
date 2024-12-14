@@ -25,7 +25,6 @@ html {
 body {
   margin: 0;
   color: #1b1c21;
-  position: relative;
 }
 
 .header {
@@ -315,7 +314,7 @@ body {
   padding-top: 53px;
 }
 
-.sidebar__menu__items {
+.sidebar__list {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -324,16 +323,7 @@ body {
   gap: 28px;
 }
 
-/* .sidebar__menu__items::before {
-  content: "";
-  background-color: #41f6d7;
-  height: 32px;
-  width: 4px;
-  transform: translateX(-24px);
-  display: none;
-} */
-
-.sidebar__menu__items a {
+.sidebar__list a {
   text-decoration: none;
   color: #1b1c21;
   font-family: "TTLakes Regular";
@@ -342,11 +332,27 @@ body {
   padding: 8px 0;
 }
 
-/* .sidebar__menu__items a:hover {
-  border-left: solid 4px #41f6d7;
-  padding-left: 20px;
-  border-radius: -5px;
-} */
+.sidebar__list a:hover {
+  color: #7e7e82;
+  transition: 0.2s ease-out all;
+}
+
+.sidebar__item {
+  position: relative;
+}
+
+.sidebar__item:hover::after {
+  content: "";
+  position: absolute;
+  left: -24px;
+  top: 0;
+  width: 4px;
+  height: 100%;
+  background-color: #41f6d7;
+  border-top-right-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+  transition: 0.2s ease-out all;
+}
 
 .footer__contacts {
   padding-top: 260px;
